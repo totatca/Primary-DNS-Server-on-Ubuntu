@@ -1,0 +1,24 @@
+//Replace totatca.local = Your-Domain
+// Network = Your-Network
+// File Name = Your-File-Name
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+// Define the Forward zone
+// My domain: totatca.local
+// Forward file called fwd.totatca.local
+zone "totatca.local" IN { 
+	type master;
+	// Path of Forward file
+	file "/etc/bind/totatca/fwd.totatca.local";
+};
+// Define the Reverse zone
+// Reverse file called: rvs.totatca.local
+zone "1.168.192.in-addr.arpa" IN {
+        type master;
+        file "/etc/bind/totatca/rvs.totatca.local";
+};
