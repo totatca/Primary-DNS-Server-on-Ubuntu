@@ -16,7 +16,7 @@ $TTL    604800
 dns-1	IN	A	192.168.1.15
 ; A record for Mail Server
 mail	IN	A	192.168.1.10
-; Mail handler or MX record for the domain hwdomain.io
+; Mail handler or MX record for the domain totatca.local
 totatca.local.    IN     MX   10   mail.totatca.local.
 ; A record for Web Server
 www	IN	A	192.168.1.20
